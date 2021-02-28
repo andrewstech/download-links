@@ -1,0 +1,1548 @@
+{
+  "project": {
+    "_id": "603a23720487ec001c4e4cb8",
+    "name": "YOUTUBE FOR ALEXA 2021",
+    "creatorID": 5898,
+    "teamID": "vrk1XNJE3p",
+    "image": "https://s3.amazonaws.com/com.getstoryflow.api.images/1597398005601-favicon.png",
+    "platformData": {
+      "products": {}
+    },
+    "members": [],
+    "devVersion": "603a23720487ec001c4e4cb9",
+    "privacy": "private",
+    "platform": "alexa"
+  },
+  "version": {
+    "_id": "603a23720487ec001c4e4cb9",
+    "projectID": "603a23720487ec001c4e4cb8",
+    "creatorID": 5898,
+    "name": "alpha video beta",
+    "variables": [
+      "access_token",
+      "youtubeURL",
+      "hasDisplay",
+      "status",
+      "youtubeData",
+      "audioTitle",
+      "video",
+      "audio",
+      "id",
+      "url_status",
+      "search_number",
+      "videoid",
+      "api",
+      "country_code",
+      "icon",
+      "countrycode"
+    ],
+    "platformData": {
+      "publishing": {
+        "forExport": true,
+        "hasAds": false,
+        "summary": "Enter your summary for the skill Andrew Video Demo",
+        "invocationName": "alpha video",
+        "locales": [
+          "en-US",
+          "en-GB",
+          "en-AU",
+          "en-IN"
+        ],
+        "category": "MUSIC_INFO_REVIEWS_AND_RECOGNITION_SERVICE",
+        "personal": false,
+        "keywords": "alpha",
+        "smallIcon": "https://s3.amazonaws.com/com.getstoryflow.api.images/1597398012547-favicon.png",
+        "largeIcon": "https://s3.amazonaws.com/com.getstoryflow.api.images/1597398005601-favicon.png",
+        "description": "Enter your description for the skill Andrew Video Demo",
+        "invocations": [
+          ""
+        ],
+        "hasPurchase": false,
+        "forChildren": false,
+        "instructions": "Sample Instruction",
+        "privacyPolicy": "https://creator.voiceflow.com/creator/terms?name=Beady%20Boy&skill=alpha%20video%20beta&children=false",
+        "termsAndConditions": "https://creator.voiceflow.com/creator/terms?name=Beady%20Boy&skill=alpha%20video%20beta&children=false",
+        "updatesDescription": ""
+      },
+      "settings": {
+        "error": {
+          "voice": "Alexa",
+          "content": ""
+        },
+        "repeat": "ALL",
+        "events": null,
+        "session": {
+          "type": "restart"
+        },
+        "permissions": [],
+        "accountLinking": null,
+        "customInterface": false
+      },
+      "slots": [
+        {
+          "key": "yykj3sfk",
+          "name": "vidname",
+          "type": {
+            "value": "AMAZON.Book"
+          },
+          "color": "#4C4C4C",
+          "inputs": []
+        }
+      ],
+      "intents": [
+        {
+          "key": "uvkk3sx5",
+          "name": "intent_search",
+          "slots": [
+            {
+              "id": "yykj3sfk",
+              "dialog": {
+                "prompt": [
+                  {
+                    "text": "Sorry, I didn't get that. Please give me something to search on Youtube. ",
+                    "slots": []
+                  }
+                ],
+                "confirm": [
+                  {
+                    "text": "",
+                    "slots": []
+                  }
+                ],
+                "utterances": [
+                  {
+                    "text": "play {{[vidname].yykj3sfk}} ",
+                    "slots": [
+                      "yykj3sfk"
+                    ]
+                  },
+                  {
+                    "text": "{{[vidname].yykj3sfk}} ",
+                    "slots": [
+                      "yykj3sfk"
+                    ]
+                  },
+                  {
+                    "text": "search for {{[vidname].yykj3sfk}} ",
+                    "slots": [
+                      "yykj3sfk"
+                    ]
+                  }
+                ],
+                "confirmEnabled": false
+              },
+              "required": true
+            }
+          ],
+          "inputs": [
+            {
+              "text": "look for {{[vidname].yykj3sfk}} ",
+              "slots": [
+                "yykj3sfk"
+              ]
+            },
+            {
+              "text": "search {{[vidname].yykj3sfk}} ",
+              "slots": [
+                "yykj3sfk"
+              ]
+            },
+            {
+              "text": "{{[vidname].yykj3sfk}} ",
+              "slots": [
+                "yykj3sfk"
+              ]
+            },
+            {
+              "text": "play {{[vidname].yykj3sfk}} ",
+              "slots": [
+                "yykj3sfk"
+              ]
+            }
+          ]
+        }
+      ],
+      "status": {
+        "stage": "DEV"
+      }
+    },
+    "rootDiagramID": "603a23720487ec001c4e4cbc"
+  },
+  "diagrams": {
+    "603a23720487ec001c4e4cba": {
+      "_id": "603a23720487ec001c4e4cba",
+      "offsetX": -270.5108337402344,
+      "offsetY": -117.31783752441407,
+      "zoom": 80,
+      "modified": 1614517887,
+      "nodes": {
+        "5f9f65f08544c620c260c00e": {
+          "nodeID": "5f9f65f08544c620c260c00e",
+          "type": "block",
+          "coords": [
+            1255.638542175293,
+            451.6472969055176
+          ],
+          "data": {
+            "name": "Block",
+            "color": "standard",
+            "steps": [
+              "5f9f65f08544c620c260c00f"
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c00f": {
+          "nodeID": "5f9f65f08544c620c260c00f",
+          "type": "api",
+          "data": {
+            "url": "https://andrews-api.herokuapp.com/api/info?url={youtube_url}",
+            "body": [
+              {
+                "key": "",
+                "val": ""
+              }
+            ],
+            "params": [
+              {
+                "key": "",
+                "val": ""
+              }
+            ],
+            "method": "GET",
+            "headers": [
+              {
+                "key": "",
+                "val": ""
+              }
+            ],
+            "content": "",
+            "mappings": [
+              {
+                "path": "response.info.url",
+                "var": "youtubeURL"
+              }
+            ],
+            "bodyType": "formData",
+            "selectedAction": "Make a GET Request",
+            "selectedIntegration": "Custom API",
+            "ports": [
+              {
+                "type": "",
+                "target": null,
+                "id": "603b965aedfc0215156909d2"
+              },
+              {
+                "type": "fail",
+                "target": "5f9f65f08544c620c260c017",
+                "id": "603b965aedfc0215156909d3"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c010": {
+          "nodeID": "5f9f65f08544c620c260c010",
+          "type": "start",
+          "coords": [
+            419.76142068185925,
+            28.672841021994827
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c012",
+                "id": "603b965aedfc0215156909d4"
+              }
+            ],
+            "steps": []
+          }
+        },
+        "5f9f65f08544c620c260c011": {
+          "nodeID": "5f9f65f08544c620c260c011",
+          "type": "block",
+          "coords": [
+            814.388542175293,
+            29.147296905517578
+          ],
+          "data": {
+            "name": "Grab Url Id",
+            "color": "blue",
+            "steps": [
+              "5f9f65f08544c620c260c012",
+              "5f9f65f08544c620c260c013",
+              "5f9f65f08544c620c260c014",
+              "5f9f65f08544c620c260c015"
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c012": {
+          "nodeID": "5f9f65f08544c620c260c012",
+          "type": "set",
+          "data": {
+            "sets": [
+              {
+                "variable": "status",
+                "expression": {
+                  "type": "value",
+                  "value": "0",
+                  "depth": 0
+                }
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c013",
+                "id": "603b965aedfc0215156909d5"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c013": {
+          "nodeID": "5f9f65f08544c620c260c013",
+          "type": "code",
+          "data": {
+            "code": "youtubeURL = youtubeURL.replace(\"https://\",\"\");\nyoutubeURL = youtubeURL.split(\"/\");\nyoutubeURL = youtubeURL[1].replace(\"watch?v=\",\"\");",
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c014",
+                "id": "603b965aedfc0215156909d6"
+              },
+              {
+                "type": "fail",
+                "target": "5f9f65f08544c620c260c014",
+                "id": "603b965aedfc0215156909d7"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c014": {
+          "nodeID": "5f9f65f08544c620c260c014",
+          "type": "api",
+          "data": {
+            "url": "https://www.youtube.com/get_video_info?video_id={{[youtubeURL].youtubeURL}}",
+            "body": [
+              {
+                "key": "",
+                "val": ""
+              }
+            ],
+            "params": [
+              {
+                "key": "",
+                "val": ""
+              }
+            ],
+            "method": "GET",
+            "headers": [
+              {
+                "key": "",
+                "val": ""
+              }
+            ],
+            "content": "",
+            "mappings": [
+              {
+                "index": "WYg8UuXIHc",
+                "path": "response",
+                "var": "youtubeData"
+              }
+            ],
+            "bodyType": "formData",
+            "selectedAction": "Make a GET Request",
+            "selectedIntegration": "Custom API",
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c015",
+                "id": "603b965aedfc0215156909d8"
+              },
+              {
+                "type": "fail",
+                "target": "5f9f65f08544c620c260c015",
+                "id": "603b965aedfc0215156909d9"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c015": {
+          "nodeID": "5f9f65f08544c620c260c015",
+          "type": "code",
+          "data": {
+            "code": "// Parse the Integration block's value\nconst data = parse_str(youtubeData);\nconst json = JSON.parse(data.player_response);\n// Getting the video title\naudioTitle = json.videoDetails.title.replace(/\\+/gi, ' ').replace(/[^\\w\\s\\.\\#]/gi, '');\n// Getting the video status\nstatus = json.playabilityStatus.status;\n// Looping through the available streams url / quality\n// Use the best quality\nlet streams = json.streamingData.adaptiveFormats;\nif(hasDisplay){\n  streams = json.streamingData.formats;\n}\nlet current_quality = 0;\nconst numberPattern = /\\d+/g;\nstreams.forEach(function(s) {\n\t\t\tlet itag = s.itag * 1,\n\t\t\t\titag_map = {\n\t\t\t\t\t18: '360p',\n\t\t\t\t\t22: '720p',\n\t\t\t\t\t37: '1080p',\n\t\t\t\t\t38: '3072p',\n\t\t\t\t\t139: \"48kbps\",\n\t\t\t\t\t140: \"128kbps\",\n\t\t\t\t\t141: \"256kbps\"\n\t\t\t\t};\n\t\t\tif(itag_map[itag]){\n\t\t\t    if(current_quality < Number(itag_map[itag].match( numberPattern ).join(''))){\n\t\t\t  \t  youtubeURL = s.url;\n\t\t\t  \t\tcurrent_quality = Number(itag_map[itag].match( numberPattern ).join(''));\n\t\t\t  \t}\n\t\t\t}\n});\n\nfunction parse_str(str) {\n\t\treturn str.split('&').reduce(function(params, param) {\n\t\t\t\tvar paramSplit = param.split('=').map(function(value) {\n\t\t\t\t\t\treturn decodeURIComponent(value.replace('+', ' '));\n\t\t\t\t});\n\t\t\t\tparams[paramSplit[0]] = paramSplit[1];\n\t\t\t\treturn params;\n\t\t}, {});\n}",
+            "ports": [
+              {
+                "type": "",
+                "target": null,
+                "id": "603b965aedfc0215156909da"
+              },
+              {
+                "type": "fail",
+                "target": "5f9f65f08544c620c260c00f",
+                "id": "603b965aedfc0215156909db"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c016": {
+          "nodeID": "5f9f65f08544c620c260c016",
+          "type": "block",
+          "coords": [
+            787.2567524591182,
+            513.2452484911512
+          ],
+          "data": {
+            "name": "Error",
+            "color": "red",
+            "steps": [
+              "5f9f65f08544c620c260c017"
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c017": {
+          "nodeID": "5f9f65f08544c620c260c017",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Sorry, an error occurred with one of your Youtube URL."
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": null,
+                "id": "603b965aedfc0215156909dc"
+              }
+            ]
+          }
+        }
+      },
+      "children": [],
+      "creatorID": 5898,
+      "variables": [],
+      "name": "Youtube Converter",
+      "versionID": "603a23720487ec001c4e4cb9"
+    },
+    "603a23720487ec001c4e4cbb": {
+      "_id": "603a23720487ec001c4e4cbb",
+      "offsetX": 196.5056480825485,
+      "offsetY": -280.4380134195621,
+      "zoom": 107.2755839029948,
+      "modified": 1604281840,
+      "nodes": {
+        "5f9f65f08544c620c260c051": {
+          "nodeID": "5f9f65f08544c620c260c051",
+          "type": "start",
+          "coords": [
+            247.73741727884033,
+            452.15296437316766
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c053"
+              }
+            ],
+            "steps": []
+          }
+        },
+        "5f9f65f08544c620c260c052": {
+          "nodeID": "5f9f65f08544c620c260c052",
+          "type": "block",
+          "coords": [
+            660,
+            453.54871427430436
+          ],
+          "data": {
+            "name": "Exit",
+            "color": "standard",
+            "steps": [
+              "5f9f65f08544c620c260c053",
+              "5f9f65f08544c620c260c054"
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c053": {
+          "nodeID": "5f9f65f08544c620c260c053",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "You said stop. This session is now ending."
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c054"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c054": {
+          "nodeID": "5f9f65f08544c620c260c054",
+          "type": "exit",
+          "data": {
+            "ports": []
+          }
+        }
+      },
+      "children": [],
+      "creatorID": 5898,
+      "variables": [],
+      "name": "Stop Flow",
+      "versionID": "603a23720487ec001c4e4cb9"
+    },
+    "603a23720487ec001c4e4cbd": {
+      "_id": "603a23720487ec001c4e4cbd",
+      "offsetX": 320,
+      "offsetY": 42,
+      "zoom": 80,
+      "modified": 1604281840,
+      "nodes": {
+        "5f9f65f08544c620c260c0be": {
+          "nodeID": "5f9f65f08544c620c260c0be",
+          "type": "start",
+          "coords": [
+            360,
+            120
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c0c0"
+              }
+            ],
+            "steps": []
+          }
+        },
+        "5f9f65f08544c620c260c0bf": {
+          "nodeID": "5f9f65f08544c620c260c0bf",
+          "type": "block",
+          "coords": [
+            760,
+            120
+          ],
+          "data": {
+            "name": "Help Message",
+            "color": "standard",
+            "steps": [
+              "5f9f65f08544c620c260c0c0",
+              "5f9f65f08544c620c260c0c1"
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c0c0": {
+          "nodeID": "5f9f65f08544c620c260c0c0",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "You said help. Do you want to continue?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c0c1"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c0c1": {
+          "nodeID": "5f9f65f08544c620c260c0c1",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "else": {
+              "type": "path",
+              "randomize": false,
+              "reprompts": []
+            },
+            "choices": [
+              {
+                "intent": "AMAZON.YesIntent",
+                "mappings": []
+              },
+              {
+                "intent": "AMAZON.NoIntent",
+                "mappings": []
+              }
+            ],
+            "reprompt": null,
+            "ports": [
+              {
+                "type": "else",
+                "target": null
+              },
+              {
+                "type": "",
+                "target": null
+              },
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c0c3"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c0c2": {
+          "nodeID": "5f9f65f08544c620c260c0c2",
+          "type": "block",
+          "coords": [
+            1170,
+            260
+          ],
+          "data": {
+            "name": "Exit",
+            "color": "standard",
+            "steps": [
+              "5f9f65f08544c620c260c0c3"
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c0c3": {
+          "nodeID": "5f9f65f08544c620c260c0c3",
+          "type": "exit",
+          "data": {
+            "ports": []
+          }
+        }
+      },
+      "children": [],
+      "creatorID": 5898,
+      "variables": [],
+      "name": "Help Flow",
+      "versionID": "603a23720487ec001c4e4cb9"
+    },
+    "603a23720487ec001c4e4cbc": {
+      "_id": "603a23720487ec001c4e4cbc",
+      "offsetX": 350.13367144442213,
+      "offsetY": 94.24311286180267,
+      "zoom": 20,
+      "modified": 1614521127,
+      "nodes": {
+        "5f9f65f08544c620c260c077": {
+          "nodeID": "5f9f65f08544c620c260c077",
+          "type": "block",
+          "coords": [
+            2374.41157653213,
+            562.8736456158543
+          ],
+          "data": {
+            "name": "Exit",
+            "color": "red",
+            "steps": [
+              "5f9f65f08544c620c260c078",
+              "5f9f65f08544c620c260c079"
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c078": {
+          "nodeID": "5f9f65f08544c620c260c078",
+          "type": "set",
+          "data": {
+            "sets": [
+              {
+                "variable": "youtubeURL",
+                "expression": {
+                  "type": "value",
+                  "value": "0",
+                  "depth": 0
+                }
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c079",
+                "id": "603a226e86044f21f9320a17"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c079": {
+          "nodeID": "5f9f65f08544c620c260c079",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Would you like to listen to another video?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "603ba2ecedfc021515690a86",
+                "id": "603a226e86044f21f9320a18"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c07a": {
+          "nodeID": "5f9f65f08544c620c260c07a",
+          "type": "block",
+          "coords": [
+            318.1615765321298,
+            1041.6236456158542
+          ],
+          "data": {
+            "name": "Prompt",
+            "color": "purple",
+            "steps": [
+              "5f9f65f08544c620c260c07b",
+              "5f9f65f08544c620c260c07c"
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c07b": {
+          "nodeID": "5f9f65f08544c620c260c07b",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Sorry, I can't find any video for {{[vidname].vidname}}. Please try again with something else. "
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c07c",
+                "id": "603a226e86044f21f9320a19"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c07c": {
+          "nodeID": "5f9f65f08544c620c260c07c",
+          "type": "prompt",
+          "data": {
+            "ports": [],
+            "reprompt": null,
+            "noMatches": {
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": ""
+                }
+              ]
+            },
+            "chips": null
+          }
+        },
+        "5f9f65f08544c620c260c07d": {
+          "nodeID": "5f9f65f08544c620c260c07d",
+          "type": "block",
+          "coords": [
+            339.76871938927275,
+            904.480788472997
+          ],
+          "data": {
+            "name": "Check",
+            "color": "green",
+            "steps": [
+              "5f9f65f08544c620c260c07e"
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c07e": {
+          "nodeID": "5f9f65f08544c620c260c07e",
+          "type": "if",
+          "data": {
+            "expressions": [
+              {
+                "type": "equals",
+                "value": [
+                  {
+                    "type": "variable",
+                    "value": "youtubeURL",
+                    "depth": 1
+                  },
+                  {
+                    "type": "value",
+                    "value": "0",
+                    "depth": 1
+                  }
+                ],
+                "depth": 0
+              }
+            ],
+            "ports": [
+              {
+                "type": "else",
+                "target": "5f9f65f08544c620c260c095",
+                "id": "603a226e86044f21f9320a1a"
+              },
+              {
+                "type": "1",
+                "target": "5f9f65f08544c620c260c07a",
+                "id": "603a226e86044f21f9320a1b"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c07f": {
+          "nodeID": "5f9f65f08544c620c260c07f",
+          "type": "block",
+          "coords": [
+            315.66157653212986,
+            524.1236456158545
+          ],
+          "data": {
+            "name": "Search",
+            "color": "blue",
+            "steps": [
+              "5f9f65f08544c620c260c080",
+              "5f9f65f08544c620c260c081",
+              "603ba03eedfc021515690a7c",
+              "603b93c6edfc0215156909c9"
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c080": {
+          "nodeID": "5f9f65f08544c620c260c080",
+          "type": "intent",
+          "data": {
+            "intent": "uvkk3sx5",
+            "mappings": [],
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c081",
+                "id": "603a226e86044f21f9320a1c"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c081": {
+          "nodeID": "5f9f65f08544c620c260c081",
+          "type": "set",
+          "data": {
+            "sets": [
+              {
+                "variable": "search_number",
+                "expression": {
+                  "type": "value",
+                  "value": "1",
+                  "depth": 0
+                }
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "603ba03eedfc021515690a7c",
+                "id": "603a226e86044f21f9320a1d"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c083": {
+          "nodeID": "5f9f65f08544c620c260c083",
+          "type": "block",
+          "coords": [
+            315.66157653212986,
+            319.1236456158544
+          ],
+          "data": {
+            "name": "Prompt",
+            "color": "purple",
+            "steps": [
+              "5f9f65f08544c620c260c084",
+              "5f9f65f08544c620c260c085"
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c084": {
+          "nodeID": "5f9f65f08544c620c260c084",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "What are you looking for?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c085",
+                "id": "603a226e86044f21f9320a20"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c085": {
+          "nodeID": "5f9f65f08544c620c260c085",
+          "type": "prompt",
+          "data": {
+            "ports": [],
+            "reprompt": null,
+            "noMatches": {
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": ""
+                }
+              ]
+            },
+            "chips": null
+          }
+        },
+        "5f9f65f08544c620c260c086": {
+          "nodeID": "5f9f65f08544c620c260c086",
+          "type": "start",
+          "coords": [
+            -210.83842346787014,
+            451.8736456158544
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c083",
+                "id": "603a226e86044f21f9320a21"
+              }
+            ],
+            "steps": [
+              "5f9f65f08544c620c260c087",
+              "5f9f65f08544c620c260c088"
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c087": {
+          "nodeID": "5f9f65f08544c620c260c087",
+          "type": "command",
+          "data": {
+            "name": "Stop",
+            "intent": "AMAZON.StopIntent",
+            "diagramID": "603a23720487ec001c4e4cbb",
+            "mappings": [],
+            "next": null,
+            "ports": []
+          }
+        },
+        "5f9f65f08544c620c260c088": {
+          "nodeID": "5f9f65f08544c620c260c088",
+          "type": "command",
+          "data": {
+            "name": "Help",
+            "intent": "AMAZON.HelpIntent",
+            "diagramID": "603a23720487ec001c4e4cbd",
+            "mappings": [],
+            "next": null,
+            "ports": []
+          }
+        },
+        "5f9f65f08544c620c260c08b": {
+          "nodeID": "5f9f65f08544c620c260c08b",
+          "type": "block",
+          "coords": [
+            1804.0814797936953,
+            791.5344281407881
+          ],
+          "data": {
+            "name": "Stream Player",
+            "color": "blue",
+            "steps": [
+              "5f9f65f08544c620c260c08c",
+              "5f9f65f08544c620c260c08d"
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c08c": {
+          "nodeID": "5f9f65f08544c620c260c08c",
+          "type": "set",
+          "data": {
+            "sets": [
+              {
+                "variable": "url_status",
+                "expression": {
+                  "type": "value",
+                  "value": "0",
+                  "depth": 0
+                }
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c08d",
+                "id": "603a226e86044f21f9320a23"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c08d": {
+          "nodeID": "5f9f65f08544c620c260c08d",
+          "type": "flow",
+          "data": {
+            "diagramID": "603a23720487ec001c4e4cbe",
+            "variableMap": null,
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c077",
+                "id": "603a226e86044f21f9320a24"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c08e": {
+          "nodeID": "5f9f65f08544c620c260c08e",
+          "type": "block",
+          "coords": [
+            826.2865765321297,
+            752.8736646893408
+          ],
+          "data": {
+            "name": "Error",
+            "color": "red",
+            "steps": [
+              "5f9f65f08544c620c260c08f",
+              "5f9f65f08544c620c260c090"
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c08f": {
+          "nodeID": "5f9f65f08544c620c260c08f",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Sorry, looks like the streaming of this video isn't possible right now."
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c090",
+                "id": "603a226e86044f21f9320a25"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c090": {
+          "nodeID": "5f9f65f08544c620c260c090",
+          "type": "exit",
+          "data": {
+            "ports": []
+          }
+        },
+        "5f9f65f08544c620c260c095": {
+          "nodeID": "5f9f65f08544c620c260c095",
+          "type": "block",
+          "coords": [
+            827.5366146791024,
+            436.6236265423681
+          ],
+          "data": {
+            "name": "Youtube",
+            "color": "blue",
+            "steps": [
+              "5f9f65f08544c620c260c096",
+              "5f9f65f08544c620c260c097",
+              "5f9f65f08544c620c260c098"
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c096": {
+          "nodeID": "5f9f65f08544c620c260c096",
+          "type": "code",
+          "data": {
+            "code": "hasDisplay = 0;\nhasDisplay = voiceflow.capabilities && ('Alexa.Presentation.APL' in voiceflow.capabilities);\n",
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c097",
+                "id": "603a226e86044f21f9320a2b"
+              },
+              {
+                "type": "fail",
+                "target": "5f9f65f08544c620c260c097",
+                "id": "603a226e86044f21f9320a2c"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c097": {
+          "nodeID": "5f9f65f08544c620c260c097",
+          "type": "flow",
+          "data": {
+            "diagramID": "603a23720487ec001c4e4cba",
+            "variableMap": null,
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c098",
+                "id": "603a226e86044f21f9320a2d"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c098": {
+          "nodeID": "5f9f65f08544c620c260c098",
+          "type": "if",
+          "data": {
+            "expressions": [
+              {
+                "type": "equals",
+                "value": [
+                  {
+                    "type": "variable",
+                    "value": "status",
+                    "depth": 1
+                  },
+                  {
+                    "type": "value",
+                    "value": "OK",
+                    "depth": 1
+                  }
+                ],
+                "depth": 0
+              }
+            ],
+            "ports": [
+              {
+                "type": "else",
+                "target": "5f9f65f08544c620c260c08e",
+                "id": "603a226e86044f21f9320a2e"
+              },
+              {
+                "type": "1",
+                "target": "5f9f65f08544c620c260c09b",
+                "id": "603a226e86044f21f9320a2f"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c09b": {
+          "nodeID": "5f9f65f08544c620c260c09b",
+          "type": "block",
+          "coords": [
+            1253.1615765321299,
+            322.87364561585434
+          ],
+          "data": {
+            "name": "Check for ID",
+            "color": "green",
+            "steps": [
+              "5f9f65f08544c620c260c09c"
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c09c": {
+          "nodeID": "5f9f65f08544c620c260c09c",
+          "type": "if",
+          "data": {
+            "expressions": [
+              {
+                "type": "equals",
+                "value": [
+                  {
+                    "type": "variable",
+                    "value": "id",
+                    "depth": 1
+                  },
+                  {
+                    "type": "value",
+                    "value": "0",
+                    "depth": 1
+                  }
+                ],
+                "depth": 0
+              }
+            ],
+            "ports": [
+              {
+                "type": "else",
+                "target": "5f9f65f08544c620c260c08c",
+                "id": "603a226e86044f21f9320a32"
+              },
+              {
+                "type": "1",
+                "target": "5f9f65f08544c620c260c08d",
+                "id": "603a226e86044f21f9320a33"
+              }
+            ]
+          }
+        },
+        "603b93c6edfc0215156909c9": {
+          "nodeID": "603b93c6edfc0215156909c9",
+          "type": "api",
+          "data": {
+            "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q={{[vidname].vidname}}&type=video&key={{[api].api}}&regionCode={{[country_code].country_code}}",
+            "body": [
+              {
+                "key": "",
+                "val": ""
+              }
+            ],
+            "params": [
+              {
+                "key": "",
+                "val": ""
+              }
+            ],
+            "method": "GET",
+            "headers": [
+              {
+                "key": "",
+                "val": ""
+              }
+            ],
+            "content": "",
+            "mappings": [
+              {
+                "path": "response.items.0.id.videoId",
+                "var": "videoid"
+              },
+              {
+                "path": "response.items.0.snippet.thumbnails.default.url",
+                "var": "icon"
+              }
+            ],
+            "bodyType": "formData",
+            "selectedAction": "Make a GET Request",
+            "selectedIntegration": "Custom API",
+            "ports": [
+              {
+                "type": "",
+                "target": "603b99adedfc021515690a5e",
+                "id": "603b93c6edfc0215156909ca"
+              },
+              {
+                "type": "fail",
+                "target": "5f9f65f08544c620c260c07b",
+                "id": "603b93c6edfc0215156909cb"
+              }
+            ]
+          }
+        },
+        "603b99adedfc021515690a5b": {
+          "nodeID": "603b99adedfc021515690a5b",
+          "type": "set",
+          "data": {
+            "sets": [
+              {
+                "variable": "youtubeURL",
+                "expression": {
+                  "type": "plus",
+                  "value": [
+                    {
+                      "type": "value",
+                      "value": "https://www.youtube.com/watch?v=",
+                      "depth": 1
+                    },
+                    {
+                      "type": "variable",
+                      "value": "videoid",
+                      "depth": 1
+                    }
+                  ],
+                  "depth": 0
+                }
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c07e",
+                "id": "603b99adedfc021515690a5d"
+              }
+            ]
+          }
+        },
+        "603b99adedfc021515690a5e": {
+          "nodeID": "603b99adedfc021515690a5e",
+          "type": "block",
+          "coords": [
+            -375.6683572221109,
+            955.7844356909866
+          ],
+          "data": {
+            "name": "Block",
+            "color": "standard",
+            "steps": [
+              "603b99adedfc021515690a5b"
+            ]
+          }
+        },
+        "603ba03eedfc021515690a7c": {
+          "nodeID": "603ba03eedfc021515690a7c",
+          "type": "set",
+          "data": {
+            "sets": [
+              {
+                "variable": "country_code",
+                "expression": {
+                  "type": "value",
+                  "value": "",
+                  "depth": 0
+                }
+              },
+              {
+                "variable": "api",
+                "expression": {
+                  "type": "value",
+                  "value": "",
+                  "depth": 0
+                }
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "603b93c6edfc0215156909c9",
+                "id": "603ba03eedfc021515690a7f"
+              }
+            ]
+          }
+        },
+        "603ba2ecedfc021515690a82": {
+          "nodeID": "603ba2ecedfc021515690a82",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "else": {
+              "type": "path",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": ""
+                }
+              ]
+            },
+            "choices": [
+              {
+                "intent": "AMAZON.YesIntent",
+                "mappings": []
+              }
+            ],
+            "reprompt": null,
+            "chips": null,
+            "ports": [
+              {
+                "type": "",
+                "target": "603ba322edfc021515690a90",
+                "id": "603ba2ecedfc021515690a84"
+              },
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c084",
+                "id": "603ba2ecedfc021515690a85"
+              }
+            ]
+          }
+        },
+        "603ba2ecedfc021515690a86": {
+          "nodeID": "603ba2ecedfc021515690a86",
+          "type": "block",
+          "coords": [
+            2610.331642777889,
+            839.7844356909866
+          ],
+          "data": {
+            "name": "Block",
+            "color": "standard",
+            "steps": [
+              "603ba2ecedfc021515690a82"
+            ]
+          }
+        },
+        "603ba322edfc021515690a90": {
+          "nodeID": "603ba322edfc021515690a90",
+          "type": "exit",
+          "data": {
+            "ports": []
+          }
+        },
+        "603ba322edfc021515690a92": {
+          "nodeID": "603ba322edfc021515690a92",
+          "type": "block",
+          "coords": [
+            3479.331642777889,
+            878.7844356909866
+          ],
+          "data": {
+            "name": "Block",
+            "color": "standard",
+            "steps": [
+              "603ba322edfc021515690a90"
+            ]
+          }
+        }
+      },
+      "children": [
+        "603a23720487ec001c4e4cbb",
+        "603a23720487ec001c4e4cbd",
+        "603a23720487ec001c4e4cbe",
+        "603a23720487ec001c4e4cba"
+      ],
+      "creatorID": 5898,
+      "variables": [],
+      "name": "ROOT",
+      "versionID": "603a23720487ec001c4e4cb9"
+    },
+    "603a23720487ec001c4e4cbe": {
+      "_id": "603a23720487ec001c4e4cbe",
+      "offsetX": 332.7809143066406,
+      "offsetY": 31.86697692871094,
+      "zoom": 80,
+      "modified": 1614516966,
+      "nodes": {
+        "5f9f65f08544c620c260c0f5": {
+          "nodeID": "5f9f65f08544c620c260c0f5",
+          "type": "block",
+          "coords": [
+            767.7738609291202,
+            187.66625826661107
+          ],
+          "data": {
+            "name": "Stream",
+            "color": "purple",
+            "steps": [
+              "5f9f65f08544c620c260c0f6",
+              "5f9f65f08544c620c260c0f7"
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c0f6": {
+          "nodeID": "5f9f65f08544c620c260c0f6",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Playing now {audioTitle} "
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c0f7",
+                "id": "603b92e01a8e7e372c1775ec"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c0f7": {
+          "nodeID": "5f9f65f08544c620c260c0f7",
+          "type": "stream",
+          "data": {
+            "audio": "{{[youtubeURL].youtubeURL}}",
+            "title": "{{[audioTitle].audioTitle}}",
+            "iconImage": "https://s3.amazonaws.com/com.getstoryflow.audio.production/1570359052166-1024px-youtube_social_white_squircle_2017.svg.png",
+            "description": "",
+            "ports": [
+              {
+                "type": "next",
+                "target": "5f9f65f08544c620c260c0fa",
+                "id": "603b92e01a8e7e372c1775ed"
+              },
+              {
+                "type": "previous",
+                "target": "5f9f65f08544c620c260c0fa",
+                "id": "603b92e01a8e7e372c1775ee"
+              },
+              {
+                "type": "pause",
+                "target": null,
+                "id": "603b92e01a8e7e372c1775ef"
+              }
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c0f8": {
+          "nodeID": "5f9f65f08544c620c260c0f8",
+          "type": "start",
+          "coords": [
+            381.2366983113459,
+            187.23086347693592
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f65f08544c620c260c0f6",
+                "id": "603b92e01a8e7e372c1775f0"
+              }
+            ],
+            "steps": []
+          }
+        },
+        "5f9f65f08544c620c260c0f9": {
+          "nodeID": "5f9f65f08544c620c260c0f9",
+          "type": "block",
+          "coords": [
+            766.5238189697266,
+            503.1662712097168
+          ],
+          "data": {
+            "name": "No Next or Previous",
+            "color": "purple",
+            "steps": [
+              "5f9f65f08544c620c260c0fa"
+            ]
+          }
+        },
+        "5f9f65f08544c620c260c0fa": {
+          "nodeID": "5f9f65f08544c620c260c0fa",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "No Next or Previous feature here has we are using only one audio url in this demo. "
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": null,
+                "id": "603b92e01a8e7e372c1775f1"
+              }
+            ]
+          }
+        }
+      },
+      "children": [],
+      "creatorID": 5898,
+      "variables": [],
+      "name": "Stream Player",
+      "versionID": "603a23720487ec001c4e4cb9"
+    }
+  }
+}

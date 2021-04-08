@@ -1,4 +1,8 @@
 ### PROJECT - Alpha Video
 
-English latest - [download](https://download.andrewstech.me/files/YOUTUBE_FOR_ALEXA_2021-603a23720487ec001c4e4cb9.vf)
+Please choose the interaction.json for your Language. 
+
+English - [download](https://download.andrewstech.me/files/english-interaction.json)
+
+German - [download](https://download.andrewstech.me/files/german-interaction.json)
 

@@ -6,3 +6,5 @@ English - [download](https://download.andrewstech.me/files/english-interaction.j
 
 German - [download](https://download.andrewstech.me/files/german-interaction.json)
 
+Spanish - [download](https://download.andrewstech.me/files/spanish-interaction.json)
+

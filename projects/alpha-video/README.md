@@ -8,3 +8,5 @@ German - [download](https://download.andrewstech.me/files/german-interaction.jso
 
 Spanish - [download](https://download.andrewstech.me/files/spanish-interaction.json)
 
+Italian - [download](https://download.andrewstech.me/files/Italian-interaction.json)
+

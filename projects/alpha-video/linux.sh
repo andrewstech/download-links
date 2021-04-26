@@ -11,3 +11,10 @@ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 node -v
 npm install -g localtunnel
+cd /etc/systemd/system/
+wget https://github.com/andrewstech/download-links/raw/main/files/local-tunnel.service
+cd
+sudo systemctl --system daemon-reload
+sudo systemctl enable alpha-video
+sudo systemctl enable local-tunnel
+echo "setup complete"

@@ -1,0 +1,10 @@
+[Unit]
+Description=Local Tunnel
+After=network-online.target
+[Service]
+Type=simple
+User=root
+ExecStart=node /usr/bin/lt --port 5000 --subdomain=changeme
+
+[Install]
+WantedBy=multi-user.target

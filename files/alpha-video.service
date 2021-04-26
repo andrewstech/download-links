@@ -1,0 +1,11 @@
+[Unit]
+Description=Alpha Video
+After=network-online.target
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/var/alpha-video
+ExecStart=/var/alpha-video/alpha-video
+
+[Install]
+WantedBy=multi-user.target

@@ -11,3 +11,5 @@ Spanish - [download](https://download.andrewstech.me/files/spanish-interaction.j
 Italian - [download](https://download.andrewstech.me/files/Italian-interaction.json)
 
 French - [download](https://download.andrewstech.me/files/french-interaction.json)
+
+Portuguese (BR) - [download](https://download.andrewstech.me/files/brazilian-interaction.json)

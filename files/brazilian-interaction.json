@@ -1,0 +1,138 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "alfa video",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "QueryIntent",
+          "slots": [
+            {
+              "name": "Query",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "Os Beetles",
+                "Musica",
+                "Vamps",
+                "Paul Hibbert"
+              ]
+            }
+          ],
+          "samples": [
+            "Procure por {Query}",
+            "Ache {Query}",
+            "Encontre {Query}",
+            "Toque {Query}",
+            "Ola",
+            "Como voce esta",
+            "Diga a palavra Oi",
+            "Diga Oi",
+            "Oi",
+            "Diga Ola Mundo",
+            "Diga Ola"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PauseIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ResumeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.MoreIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateSettingsIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageUpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PreviousIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollRightIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollLeftIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollUpIntent",
+          "samples": []
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "QueryIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "Query",
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1495999501519.539061936133"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1495999501519.539061936133",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Que musica voce quer tocar?"
+          }
+        ]
+      }
+    ]
+  }
+}
